@@ -23,6 +23,7 @@ class MainApp extends StatelessWidget {
     ];
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text("My app"),
@@ -30,6 +31,10 @@ class MainApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Text('รายการ')],
+            ),
             Expanded(
               flex: 2,
               child: Padding(
@@ -53,7 +58,10 @@ class MainApp extends StatelessWidget {
                 ),
               ),
             ),
-
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Text('รายการ')],
+            ),
             Expanded(
               flex: 2,
               child: ListView.builder(
