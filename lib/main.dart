@@ -31,10 +31,25 @@ class MainApp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text('รายการ')],
+              children: [
+                Text(
+                  'รายการ',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'รายการทั้งหมด',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromRGBO(124, 194, 255, 1),
+                  ),
+                ),
+              ],
             ),
+
             Expanded(
               flex: 2,
               child: Padding(
@@ -58,10 +73,25 @@ class MainApp extends StatelessWidget {
                 ),
               ),
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [Text('รายการ')],
+              children: [
+                Text(
+                  'รายการ',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  'รายการทั้งหมด',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 96, 207, 255),
+                  ),
+                ),
+              ],
             ),
+            SizedBox(height: 10),
             Expanded(
               flex: 2,
               child: ListView.builder(
