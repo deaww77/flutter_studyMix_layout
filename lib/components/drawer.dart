@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mix/gallery.dart';
 import 'package:flutter_mix/listscreen.dart';
-import 'package:flutter_mix/main.dart';
 import 'package:get/get.dart';
 
 class MyDrawer extends StatefulWidget {
