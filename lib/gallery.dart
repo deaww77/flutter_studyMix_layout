@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Gallery extends StatefulWidget {
   const Gallery({super.key});
@@ -43,6 +44,22 @@ class _GalleryState extends State<Gallery> {
               child: Image.asset(imagePaths[index], fit: BoxFit.cover),
             );
           },
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ElevatedButton.icon(
+          onPressed: () {
+            Get.back();
+          },
+          icon: const Icon(Icons.arrow_back),
+          label: const Text("Back"),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 69, 255, 171),
+            foregroundColor: Colors.black,
+            padding: const EdgeInsets.symmetric(vertical: 12),
+            textStyle: const TextStyle(fontSize: 18),
+          ),
         ),
       ),
     );

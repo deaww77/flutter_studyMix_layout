@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ListSreenPage extends StatefulWidget {
   const ListSreenPage({super.key});
@@ -46,6 +47,22 @@ class _ListSreenPageState extends State<ListSreenPage> {
               ),
             );
           },
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: ElevatedButton.icon(
+          onPressed: () {
+            Get.back();
+          },
+          icon: const Icon(Icons.arrow_back),
+          label: const Text("Back"),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color.fromARGB(255, 69, 255, 171),
+            foregroundColor: Colors.black,
+            padding: const EdgeInsets.symmetric(vertical: 12),
+            textStyle: const TextStyle(fontSize: 18),
+          ),
         ),
       ),
     );
