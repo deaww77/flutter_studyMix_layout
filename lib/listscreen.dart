@@ -56,10 +56,10 @@ class _ListSreenPageState extends State<ListSreenPage> {
             Get.back();
           },
           icon: const Icon(Icons.arrow_back),
-          label: const Text("Back"),
+          label: const Text("Back to Home"),
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color.fromARGB(255, 69, 255, 171),
-            foregroundColor: Colors.black,
+            backgroundColor: const Color.fromARGB(255, 205, 55, 255),
+            foregroundColor: const Color.fromARGB(255, 100, 255, 164),
             padding: const EdgeInsets.symmetric(vertical: 12),
             textStyle: const TextStyle(fontSize: 18),
           ),

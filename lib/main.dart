@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mix/components/drawer.dart';
 import 'package:flutter_mix/gallery.dart';
 import 'package:get/get.dart';
 import 'package:flutter_mix/listscreen.dart';
@@ -32,6 +33,7 @@ class MainApp extends StatelessWidget {
           title: const Text("My app"),
           backgroundColor: const Color.fromARGB(255, 69, 255, 171),
         ),
+        drawer: const MyDrawer(),
         body: Column(
           children: [
             SizedBox(height: 10),
