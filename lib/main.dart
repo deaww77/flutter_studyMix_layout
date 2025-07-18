@@ -12,17 +12,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconList = <IconData>[
-      Icons.ac_unit,
-      Icons.access_alarm,
-      Icons.accessibility,
-      Icons.account_balance,
-      Icons.adb,
-      Icons.airplanemode_active,
-      Icons.album,
-      Icons.backup,
-      Icons.cake,
-      Icons.dashboard,
+    final imageList = <Image>[
+      Image.asset('assets/images/dog1.jpg'),
+      Image.asset('assets/images/dog2.jpg'),
+      Image.asset('assets/images/dog3.jpg'),
+      Image.asset('assets/images/dog4.jpg'),
+      Image.asset('assets/images/dog5.jpg'),
+      Image.asset('assets/images/dog6.jpg'),
+      Image.asset('assets/images/dog7.jpg'),
+      Image.asset('assets/images/dog8.jpg'),
+      Image.asset('assets/images/dog9.jpg'),
+      Image.asset('assets/images/dog10.jpg'),
     ];
 
     return GetMaterialApp(
@@ -64,18 +64,18 @@ class MainApp extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: GridView.builder(
-                  itemCount: iconList.length,
+                  itemCount: imageList.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return Center(
-                      child: Icon(
-                        iconList[index],
-                        size: 50,
-                        color: Colors.blue,
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: Image.asset(
+                        'assets/images/dog${index + 1}.jpg',
+                        fit: BoxFit.cover,
                       ),
                     );
                   },

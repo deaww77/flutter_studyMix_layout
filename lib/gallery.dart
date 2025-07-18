@@ -10,39 +10,39 @@ class Gallery extends StatefulWidget {
 class _GalleryState extends State<Gallery> {
   @override
   Widget build(BuildContext context) {
-    final iconList = <IconData>[
-      Icons.ac_unit,
-      Icons.access_alarm,
-      Icons.accessibility,
-      Icons.account_balance,
-      Icons.adb,
-      Icons.airplanemode_active,
-      Icons.album,
-      Icons.backup,
-      Icons.cake,
-      Icons.dashboard,
+    final imagePaths = [
+      'assets/images/dog1.jpg',
+      'assets/images/dog2.jpg',
+      'assets/images/dog3.jpg',
+      'assets/images/dog4.jpg',
+      'assets/images/dog5.jpg',
+      'assets/images/dog6.jpg',
+      'assets/images/dog7.jpg',
+      'assets/images/dog8.jpg',
+      'assets/images/dog9.jpg',
+      'assets/images/dog10.jpg',
     ];
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Gallery"),
         backgroundColor: const Color.fromARGB(255, 69, 255, 171),
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: GridView.builder(
-            itemCount: iconList.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-            ),
-            itemBuilder: (BuildContext context, int index) {
-              return Center(
-                child: Icon(iconList[index], size: 50, color: Colors.blue),
-              );
-            },
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: GridView.builder(
+          itemCount: imagePaths.length,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
           ),
+          itemBuilder: (BuildContext context, int index) {
+            return ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(imagePaths[index], fit: BoxFit.cover),
+            );
+          },
         ),
       ),
     );
