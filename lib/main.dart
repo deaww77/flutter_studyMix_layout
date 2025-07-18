@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mix/gallery.dart';
+import 'package:get/get.dart';
+import 'package:flutter_mix/listscreen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -22,7 +25,7 @@ class MainApp extends StatelessWidget {
       Icons.dashboard,
     ];
 
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
@@ -39,12 +42,18 @@ class MainApp extends StatelessWidget {
                   'รายการ',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  'รายการทั้งหมด',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromRGBO(124, 194, 255, 1),
+                TextButton(
+                  onPressed: () {
+                    Get.to(() => const Gallery());
+                    print("clicke to gallery");
+                  },
+                  child: Text(
+                    'รายการทั้งหมด',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 2, 80, 148),
+                    ),
                   ),
                 ),
               ],
@@ -81,12 +90,18 @@ class MainApp extends StatelessWidget {
                   'รายการ',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  'รายการทั้งหมด',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 96, 207, 255),
+                TextButton(
+                  onPressed: () {
+                    Get.to(() => const ListSreenPage());
+                    print("clicke to list all");
+                  },
+                  child: Text(
+                    'รายการทั้งหมด',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: const Color.fromARGB(255, 2, 80, 148),
+                    ),
                   ),
                 ),
               ],
